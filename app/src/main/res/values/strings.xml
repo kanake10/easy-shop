@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">EasyShop</string>
+    <string name="welcome_to_easyshop">Welcome to EasyShop</string>
+    <string name="sign_up_subtitle">App</string>
+    <string name="name_label">Name *</string>
+    <string name="email_label">Email *</string>
+    <string name="password_label">Password *</string>
+    <string name="confirm_password_label">Confirm Password *</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="enjoy_shopping">Enjoy Shopping</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="easy_shop">EasyShop</string>
+    <string name="view_cart">View Cart</string>
+    <string name="cart_is_empty">Cart is empty</string>
+    <string name="total">Total:</string>
+    <string name="place_order_button">Place Order</string>
+    <string name="delete">Delete</string>
+    <string name="server_error_message">Server Error: %1$s</string>
+    <string name="network_error_message">Network error. Please check your internet connection.</string>
+    <string name="unexpected_error_message">Unexpected error occurred</string>
+    <string name="all_fields_required">All fields are required!</string>
+    <string name="passwords_dont_match">Passwords do not match!</string>
+    <string name="sign_up_failed">Sign-up failed</string>
+    <string name="sign_in_failed">Sign-in failed</string>
+    <string name="easy_shop_title">EasyShop</string>
+    <string name="server_error">Server Error: %1$d</string>
+    <string name="network_error">Network error. Please check your internet connection.</string>
+    <string name="unexpected_error">Unexpected error occurred</string>
+    <string name="total_label">Total:</string>
+    <string name="place_order">Place Order</string>
+    <string name="delete_item">Delete</string>
+</resources>
