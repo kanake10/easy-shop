@@ -83,8 +83,18 @@ class CartRepositoryImplTest {
     @Test
     fun `test getAllCartItems returns list of items`() = runTest {
         val cartItems = listOf(
-            CartItemEntity("image+url", 200.00, "Jacket", 1, 1),
-            CartItemEntity("image+url", 200.00, "Jacket", 1, 2)
+            CartItemEntity(
+                "image1+url",
+                200.00,
+                "Jacket",
+                1,
+                1),
+            CartItemEntity(
+                "image2+url",
+                500.00,
+                "Ring",
+                1,
+                2)
         )
         every { cartDao.getAllCartItems() } returns flowOf(cartItems)
 

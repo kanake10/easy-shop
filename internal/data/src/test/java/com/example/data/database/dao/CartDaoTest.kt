@@ -69,18 +69,18 @@ class CartDaoTest : BaseDbTest() {
     @Test
     fun testDeleteAllCartItems() = runBlocking {
         val cartItem1 = CartItemEntity(
-            id = 1,
-            image = "image1",
-            price = 100.0,
-            title = "Item 1",
-            quantity = 1
+            "image1+url",
+            200.00,
+            "Jacket",
+            1,
+            1
         )
-        val cartItem2 = CartItemEntity(
-            id = 2,
-            image = "image2",
-            price = 200.0,
-            title = "Item 2",
-            quantity = 2
+        val cartItem2 =CartItemEntity(
+            "image2+url",
+            500.00,
+            "Ring",
+            1,
+            2
         )
         cartDao.insert(listOf(cartItem1, cartItem2))
 

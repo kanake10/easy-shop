@@ -61,7 +61,14 @@ class ProductsRepositoryImplTest {
     @Test
     fun `fetchProducts returns Success when network is available and API call succeeds`() = runTest {
         val productsDto = listOf(
-            ProductsDto("Shoes", "image_desc", 1, "image_url", 100.00, "AirForce")
+            ProductsDto(
+                id = 1,
+                title = "Sample Product",
+                price = 19.99,
+                category = "Electronics",
+                description = "A great product",
+                image = "https://example.com/image.jpg"
+            )
         )
         val networkResult = NetworkResult.Success(productsDto)
         val productsEntity = productsDto.map { it.toEntity() }
@@ -80,7 +87,14 @@ class ProductsRepositoryImplTest {
     @Test
     fun `fetchProducts returns cached products when network is unavailable`() = runTest {
         val cachedProducts = listOf(
-            ProductsEntity("image_url", 100.00, "Jacket", "Clothes", "jacket_cloth", 1)
+            ProductsEntity(
+                id = 1,
+                image = "image_url",
+                price = 100.0,
+                title = "Product 1",
+                category = "Category 1",
+                description = "Description 1"
+            )
         )
         val cachedDto = cachedProducts.map { it.toDto() }
 
@@ -96,7 +110,14 @@ class ProductsRepositoryImplTest {
     @Test
     fun `saveProducts saves the products to the database`() = runTest {
         val productsEntity = listOf(
-            ProductsEntity("image_url", 100.00, "Jacket", "Clothes", "jacket_cloth", 1)
+            ProductsEntity(
+                "image_url",
+                100.00,
+                "Jacket",
+                "Clothes",
+                "jacket_cloth",
+                1
+            )
         )
         coEvery { productsDao.insert(productsEntity) } returns Unit
 
